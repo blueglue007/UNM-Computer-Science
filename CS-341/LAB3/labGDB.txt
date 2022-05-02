@@ -1,0 +1,263 @@
+file someFile.txt
+someFile.txt: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=17427617663aa71b9e12ffd8844111019deee611, not stripped
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+strings someFile.txt
+Usage: %s [<input_file>]
+Welcome to my fiendish little bomb. You have 3 phases with
+which to blow yourself up. Have a nice day!
+Phase 1 defused. How about the next one?
+2 phases isn't bad. You could ask your teacher for a bigger bomb, though...
+You can Russia from land here in Alaska.
+So you think you can stop the bomb with ctrl-c, do you?
+Congratulations! You've defused the bomb!
+Well...
+OK. :-)
+Invalid phase%s
+BOOM!!!
+The bomb has blown up.
+%d %d %d %d %d %d
+Error: Premature EOF on stdin
+GRADE_BOMB
+Error: Input line too long
+%d %d %s
+greatwhite.ics.cs.cmu.edu
+bluefish.ics.cs.cmu.edu
+bonito.ics.cs.cmu.edu
+cobia.ics.cs.cmu.edu
+Program timed out after %d seconds
+Error: HTTP request failed with error %d: %s
+GET /%s/submitr.pl/?userid=%s&lab=%s&result=%s&submit=submit HTTP/1.0
+Error: Unable to connect to server %s
+%%%02X
+%s %d %[a-zA-z ]
+changeme.edu
+AUTORESULT_STRING=%s
+bomblab
+csapp
+;*3$"
+GCC: (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+/usr/include/x86_64-linux-gnu/bits
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include
+/usr/include
+bomb.c
+stdio2.h
+stddef.h
+types.h
+stdio.h
+libio.h
+<built-in>
+
+-------------------------------------------------------------------------------------------------------------------------
+objdump -j .rodata -s someFile.txt
+someFile.txt:     file format elf64-x86-64
+
+Contents of section .rodata:
+ 401e70 01000200 72002573 3a204572 726f723a  ....r.%s: Error:
+ 401e80 20436f75 6c646e27 74206f70 656e2025   Couldn't open %
+ 401e90 730a0055 73616765 3a202573 205b3c69  s..Usage: %s [<i
+ 401ea0 6e707574 5f66696c 653e5d0a 00000000  nput_file>].....
+ 401eb0 57656c63 6f6d6520 746f206d 79206669  Welcome to my fi
+ 401ec0 656e6469 7368206c 6974746c 6520626f  endish little bo
+ 401ed0 6d622e20 596f7520 68617665 20332070  mb. You have 3 p
+ 401ee0 68617365 73207769 74680000 00000000  hases with......
+ 401ef0 77686963 6820746f 20626c6f 7720796f  which to blow yo
+ 401f00 75727365 6c662075 702e2048 61766520  urself up. Have
+ 401f10 61206e69 63652064 61792100 00000000  a nice day!.....
+ 401f20 50686173 65203120 64656675 7365642e  Phase 1 defused.
+ 401f30 20486f77 2061626f 75742074 6865206e   How about the n
+ 401f40 65787420 6f6e653f 00000000 00000000  ext one?........
+ 401f50 32207068 61736573 2069736e 27742062  2 phases isn't b
+ 401f60 61642e20 596f7520 636f756c 64206173  ad. You could as
+ 401f70 6b20796f 75722074 65616368 65722066  k your teacher f
+ 401f80 6f722061 20626967 67657220 626f6d62  or a bigger bomb
+ 401f90 2c207468 6f756768 2e2e2e00 00000000  , though........
+ 401fa0 596f7520 63616e20 52757373 69612066  You can Russia f
+ 401fb0 726f6d20 6c616e64 20686572 6520696e  rom land here in
+ 401fc0 20416c61 736b612e 00000000 00000000   Alaska.........
+ 401fd0 536f2079 6f752074 68696e6b 20796f75  So you think you
+ 401fe0 2063616e 2073746f 70207468 6520626f   can stop the bo
+ 401ff0 6d622077 69746820 6374726c 2d632c20  mb with ctrl-c,
+ 402000 646f2079 6f753f00 436f6e67 72617475  do you?.Congratu
+ 402010 6c617469 6f6e7321 20596f75 27766520  lations! You've
+ 402020 64656675 73656420 74686520 626f6d62  defused the bomb
+ 402030 21005765 6c6c2e2e 2e004f4b 2e203a2d  !.Well....OK. :-
+ 402040 2900496e 76616c69 64207068 61736525  ).Invalid phase%
+ 402050 730a000a 424f4f4d 21212100 54686520  s...BOOM!!!.The
+ 402060 626f6d62 20686173 20626c6f 776e2075  bomb has blown u
+ 402070 702e0025 64202564 20256420 25642025  p..%d %d %d %d %
+ 402080 64202564 00457272 6f723a20 5072656d  d %d.Error: Prem
+ 402090 61747572 6520454f 46206f6e 20737464  ature EOF on std
+ 4020a0 696e0047 52414445 5f424f4d 42004572  in.GRADE_BOMB.Er
+ 4020b0 726f723a 20496e70 7574206c 696e6520  ror: Input line
+ 4020c0 746f6f20 6c6f6e67 00256420 25642025  too long.%d %d %
+ 4020d0 73006772 65617477 68697465 2e696373  s.greatwhite.ics
+ 4020e0 2e63732e 636d752e 65647500 626c7565  .cs.cmu.edu.blue
+ 4020f0 66697368 2e696373 2e63732e 636d752e  fish.ics.cs.cmu.
+ 402100 65647500 626f6e69 746f2e69 63732e63  edu.bonito.ics.c
+ 402110 732e636d 752e6564 7500636f 6269612e  s.cmu.edu.cobia.
+ 402120 6963732e 63732e63 6d752e65 64750000  ics.cs.cmu.edu..
+ 402130 50726f67 72616d20 74696d65 64206f75  Program timed ou
+ 402140 74206166 74657220 25642073 65636f6e  t after %d secon
+ 402150 64730a00 00000000 4572726f 723a2048  ds......Error: H
+ 402160 54545020 72657175 65737420 6661696c  TTP request fail
+ 402170 65642077 69746820 6572726f 72202564  ed with error %d
+ 402180 3a202573 00000000 47455420 2f25732f  : %s....GET /%s/
+ 402190 7375626d 6974722e 706c2f3f 75736572  submitr.pl/?user
+ 4021a0 69643d25 73266c61 623d2573 26726573  id=%s&lab=%s&res
+ 4021b0 756c743d 25732673 75626d69 743d7375  ult=%s&submit=su
+ 4021c0 626d6974 20485454 502f312e 300d0a0d  bmit HTTP/1.0...
+ 4021d0 0a000000 00000000 4572726f 723a2055  ........Error: U
+ 4021e0 6e61626c 6520746f 20636f6e 6e656374  nable to connect
+ 4021f0 20746f20 73657276 65722025 73000000   to server %s...
+ 402200 25252530 32580025 73202564 20255b61  %%%02X.%s %d %[a
+ 402210 2d7a412d 7a205d00 6368616e 67656d65  -zA-z ].changeme
+ 402220 2e656475 000a4155 544f5245 53554c54  .edu..AUTORESULT
+ 402230 5f535452 494e473d 25730a00 626f6d62  _STRING=%s..bomb
+ 402240 6c616200 63736170 7000               lab.csapp.
+
+-------------------------------------------------------------------------------------------------
+objdump -d someFile.txt
+0000000000400e40 <phase_1>:
+  400e40:       48 83 ec 08             sub    $0x8,%rsp
+  400e44:       be a0 1f 40 00          mov    $0x401fa0,%esi
+  400e49:       e8 fa 00 00 00          callq  400f48 <strings_not_equal>
+  400e4e:       85 c0                   test   %eax,%eax
+  400e50:       74 05                   je     400e57 <phase_1+0x17>
+  400e52:       e8 f3 01 00 00          callq  40104a <explode_bomb>
+  400e57:       48 83 c4 08             add    $0x8,%rsp
+  400e5b:       c3                      retq
+
+0000000000400e5c <phase_2>:
+  400e5c:       55                      push   %rbp
+  400e5d:       53                      push   %rbx
+  400e5e:       48 83 ec 28             sub    $0x28,%rsp
+  400e62:       48 89 e6                mov    %rsp,%rsi
+  400e65:       e8 02 02 00 00          callq  40106c <read_six_numbers>
+  400e6a:       83 3c 24 00             cmpl   $0x0,(%rsp)
+  400e6e:       79 24                   jns    400e94 <phase_2+0x38>
+  400e70:       e8 d5 01 00 00          callq  40104a <explode_bomb>
+  400e75:       eb 1d                   jmp    400e94 <phase_2+0x38>
+  400e77:       89 d8                   mov    %ebx,%eax
+  400e79:       03 45 fc                add    -0x4(%rbp),%eax
+  400e7c:       39 45 00                cmp    %eax,0x0(%rbp)
+  400e7f:       74 05                   je     400e86 <phase_2+0x2a>
+  400e81:       e8 c4 01 00 00          callq  40104a <explode_bomb>
+  400e86:       83 c3 01                add    $0x1,%ebx
+  400e89:       48 83 c5 04             add    $0x4,%rbp
+  400e8d:       83 fb 06                cmp    $0x6,%ebx
+  400e90:       75 e5                   jne    400e77 <phase_2+0x1b>
+  400e92:       eb 0c                   jmp    400ea0 <phase_2+0x44>
+  400e94:       48 8d 6c 24 04          lea    0x4(%rsp),%rbp
+  400e99:       bb 01 00 00 00          mov    $0x1,%ebx
+  400e9e:       eb d7                   jmp    400e77 <phase_2+0x1b>
+  400ea0:       48 83 c4 28             add    $0x28,%rsp
+  400ea4:       5b                      pop    %rbx
+  400ea5:       5d                      pop    %rbp
+  400ea6:       c3                      retq
+  400ea7:       66 0f 1f 84 00 00 00    nopw   0x0(%rax,%rax,1)
+  400eae:       00 00
+
+
+-------------------------------------------------------------------------------------------------
+gdp
+(gdb) print main
+$1 = {int (int, char **)} 0x400d6d <main>
+--------------------------------------------------------------------------------------------------
+(gdb) break 1
+Breakpoint 1 at 0x400d6d: file bomb.c, line 1.
+--------------------------------------------------------------------------------------------------
+(gdb) run
+Starting program: /nfs/student/student/s/sihxu/CS341/Lab3/someFile.txt
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffeaf8) at bomb.c:37
+37      bomb.c: Permission denied.
+--------------------------------------------------------------------------------------------------
+(gdb) info registers
+rax            0x400d6d 4197741
+rbx            0x0      0
+rcx            0x0      0
+rdx            0x7fffffffeb08   140737488349960
+rsi            0x7fffffffeaf8   140737488349944
+rdi            0x1      1
+rbp            0x401df0 0x401df0 <__libc_csu_init>
+rsp            0x7fffffffea18   0x7fffffffea18
+r8             0x401e60 4202080
+r9             0x7ffff7de7af0   140737351940848
+r10            0x846    2118
+r11            0x7ffff7a2d750   140737348032336
+r12            0x400c80 4197504
+r13            0x7fffffffeaf0   140737488349936
+r14            0x0      0
+r15            0x0      0
+rip            0x400d6d 0x400d6d <main>
+eflags         0x246    [ PF ZF IF ]
+cs             0x33     51
+ss             0x2b     43
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+
+
+
+--------------------------------------------------------------------------------------------------
+(gdb) disassemble $eip
+Value can't be converted to integer.
+
+--------------------------------------------------------------------------------------------------
+(gdb) display /i $rdx
+2: x/i $rdx
+   0x7fffffffeb08:      push   %rdi
+
+
+--------------------------------------------------------------------------------------------------
+(gdb) stepi
+0x0000000000400d71      45      in bomb.c
+1: x/i $eip
+<error: Value can't be converted to integer.>
+2: x/i $rdx
+   0x7fffffffeb08:      push   %rdi
+--------------------------------------------------------------------------------------------------
+(gdb) disassemble main
+Dump of assembler code for function main:
+=> 0x0000000000400d6d <+0>:     push   %rbx
+   0x0000000000400d6e <+1>:     cmp    $0x1,%edi
+   0x0000000000400d71 <+4>:     jne    0x400d83 <main+22>
+   0x0000000000400d73 <+6>:     mov    0x2027ae(%rip),%rax        # 0x603528 <stdin@@GLIBC_2.2.5>
+   0x0000000000400d7a <+13>:    mov    %rax,0x2027c7(%rip)        # 0x603548 <infile>
+   0x0000000000400d81 <+20>:    jmp    0x400de6 <main+121>
+   0x0000000000400d83 <+22>:    mov    %rsi,%rbx
+   0x0000000000400d86 <+25>:    cmp    $0x2,%edi
+   0x0000000000400d89 <+28>:    jne    0x400dc5 <main+88>
+   0x0000000000400d8b <+30>:    mov    0x8(%rsi),%rdi
+   0x0000000000400d8f <+34>:    mov    $0x401e74,%esi
+   0x0000000000400d94 <+39>:    callq  0x400c00 <fopen@plt>
+   0x0000000000400d99 <+44>:    mov    %rax,0x2027a8(%rip)        # 0x603548 <infile>
+   0x0000000000400da0 <+51>:    test   %rax,%rax
+   0x0000000000400da3 <+54>:    jne    0x400de6 <main+121>
+   0x0000000000400da5 <+56>:    mov    0x8(%rbx),%rcx
+   0x0000000000400da9 <+60>:    mov    (%rbx),%rdx
+   0x0000000000400dac <+63>:    mov    $0x401e76,%esi
+   0x0000000000400db1 <+68>:    mov    $0x1,%edi
+   0x0000000000400db6 <+73>:    callq  0x400bf0 <__printf_chk@plt>
+   0x0000000000400dbb <+78>:    mov    $0x8,%edi
+---Type <return> to continue, or q <return> to quit---
+
+
+--------------------------------------------------------------------------------------------------
+(gdb) disassembl phase_1
+Dump of assembler code for function phase_1:
+   0x0000000000400e40 <+0>:     sub    $0x8,%rsp
+   0x0000000000400e44 <+4>:     mov    $0x401fa0,%esi
+   0x0000000000400e49 <+9>:     callq  0x400f48 <strings_not_equal>
+   0x0000000000400e4e <+14>:    test   %eax,%eax
+   0x0000000000400e50 <+16>:    je     0x400e57 <phase_1+23>
+   0x0000000000400e52 <+18>:    callq  0x40104a <explode_bomb>
+   0x0000000000400e57 <+23>:    add    $0x8,%rsp
+   0x0000000000400e5b <+27>:    retq
+End of assembler dump.
+
+
+
+
